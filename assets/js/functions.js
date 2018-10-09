@@ -20,8 +20,8 @@ function getRandomFloat(min, max) {
 	  	$.ajax({
 	    type: "GET",
 	    url: "assay.php",
-	    addend1: a,
-	    addend2: b,
+	    addend1: a.serialize(),
+	    addend2: b.serialize(),
 	    success: function(data) {
 	          $('.out').text(data);
 	       }
