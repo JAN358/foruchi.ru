@@ -19,7 +19,7 @@ function getRandomFloat(min, max) {
 	  event.preventDefault();
 	  var form_data = $(this).serialize()
 	  	$.ajax({
-	    type: "GET",
+	    type: "POST",
 	    url: "assay.php",
 	    data: form_data,
 	    success: function(data) {
