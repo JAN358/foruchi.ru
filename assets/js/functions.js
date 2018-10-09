@@ -31,13 +31,10 @@ function sendAjaxForm(result_form, ajax_form, url) {
 	$('.addend_2').text(b);
 	$('.answer').text(c);
 
-	$("#form").on( "submit", function( event ) {
-	  event.preventDefault();
-	  function(){
-			sendAjaxForm('result_form', 'ajax_form', 'assay.php');
-			return false; 
-		}  
-	});
+	$("#form").click(function(){
+		sendAjaxForm('result_form', 'ajax_form', 'assay.php');
+		return false; 
+	})
 
   });
 
