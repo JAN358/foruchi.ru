@@ -23,7 +23,7 @@ function getRandomFloat(min, max) {
 	    url: "assay.php",
 	    data: form_data,
 	    success: function(data) {
-	          $('.out').text(data);
+	          $('.out').html(data);
 	       }
 	    });   
 	});
