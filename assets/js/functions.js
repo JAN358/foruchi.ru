@@ -1,25 +1,5 @@
 (function ($) {
 
-function getRandomFloat(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
-function sendAjaxForm(result_form, ajax_form, url) {
-    $.ajax({
-        url:     url, //url страницы (action_ajax_form.php)
-        type:     "GET", //метод отправки
-        dataType: "html", //формат данных
-        data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
-        success: function(response) { //Данные отправлены успешно
-        	result = $.parseJSON(response);
-        	$('.out').html('Имя: '+result.name+'<br>Телефон: '+result.phonenumber);
-    	},
-    	error: function(response) { // Данные не отправлены
-            $('.out').html('Ошибка. Данные не отправлены.');
-    	}
- 	});
-}
-
   $(document).ready(function () {
 
 	var a, b, c;
@@ -37,5 +17,25 @@ function sendAjaxForm(result_form, ajax_form, url) {
 	})
 
   });
+
+  	function getRandomFloat(min, max) {
+	  return Math.floor(Math.random() * (max - min)) + min;
+	}
+
+	function sendAjaxForm(result_form, ajax_form, url) {
+	    $.ajax({
+	        url:     url, //url страницы (action_ajax_form.php)
+	        type:     "POST", //метод отправки
+	        dataType: "html", //формат данных
+	        data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
+	        success: function(response) { //Данные отправлены успешно
+	        	result = $.parseJSON(response);
+	        	$('.out').html('Имя: '+result.name+'<br>Телефон: '+result.phonenumber);
+	    	},
+	    	error: function(response) { // Данные не отправлены
+	            $('.out').html('Ошибка. Данные не отправлены.');
+	    	}
+	 	});
+	}
 
 }(jQuery));
