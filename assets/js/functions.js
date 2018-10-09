@@ -24,9 +24,10 @@
 
 	function sendAjaxForm(result_form, ajax_form, url) {
 	    $.ajax({
-	        url:     url, //url страницы (action_ajax_form.php)
+	        url:      url,
 	        type:     "POST", //метод отправки
 	        dataType: "html", //формат данных
+	        contentType: "application/json; charset=utf-8",
 	        data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
 	        success: function(response) { //Данные отправлены успешно
 	        	result = $.parseJSON(response);
