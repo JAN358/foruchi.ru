@@ -25,15 +25,15 @@
 	function sendAjaxForm(result_form, ajax_form, url) {
 	    $.ajax({
 	        url:      url,
-	        type:     "POST", //метод отправки
-	        dataType: "html", //формат данных
+	        type:     "POST",
+	        dataType: "html",
 	        contentType: "application/json; charset=utf-8",
-	        data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
-	        success: function(response) { //Данные отправлены успешно
+	        data: $("#"+ajax_form).serialize(),
+	        success: function(response) {
 	        	result = $.parseJSON(response);
 	        	$('.out').html('Имя: '+result.name+'<br>Телефон: '+result.phonenumber);
 	    	},
-	    	error: function(response) { // Данные не отправлены
+	    	error: function(response) {
 	            $('.out').html('Ошибка. Данные не отправлены.');
 	    	}
 	 	});
