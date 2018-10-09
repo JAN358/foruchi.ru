@@ -12,6 +12,7 @@
 	$('.answer').text(c);
 
 	$("#ajax_form").click(function(){
+		e.preventDefault();
 		sendAjaxForm('result_form', 'ajax_form', 'assay.php');
 		return false; 
 	})
@@ -22,15 +23,19 @@
 	  return Math.floor(Math.random() * (max - min)) + min;
 	}
 
+	var data = {};
+	data.addend_1 = "title";
+	data.addend_2 = "message";
+
 	function sendAjaxForm(result_form, ajax_form, url) {
 	    $.ajax({
 	        url:      url,
 	        type:     "POST",
-	        dataType: "html",
+	        data: JSON.stringify(data),
 	        contentType: "application/json; charset=utf-8",
-	        data: $("#"+ajax_form).serialize(),
+	        //data: $("#"+ajax_form).serialize(),
 	        success: function(response) {
-	        	result = $.parseJSON(response);
+	        	result = JSON.stringify(data)/*$.parseJSON(response)*/;
 	        	$('.out').html('Первый: '+result.addend1+'<br>Второй: '+result.addend1);
 	    	},
 	    	error: function(response) {
