@@ -31,7 +31,7 @@
 	        data: $("#"+ajax_form).serialize(),
 	        success: function(response) {
 	        	result = $.parseJSON(response);
-	        	$('.out').html('Имя: '+result.name+'<br>Телефон: '+result.phonenumber);
+	        	$('.out').html('Первый: '+result.addend1+'<br>Второй: '+result.addend1);
 	    	},
 	    	error: function(response) {
 	            $('.out').html('Ошибка. Данные не отправлены.');
