@@ -11,7 +11,7 @@
 	$('.addend_2').text(b);
 	$('.answer').text(c);
 
-	$("#form").click(function(){
+	$("#ajax_form").click(function(){
 		sendAjaxForm('result_form', 'ajax_form', 'assay.php');
 		return false; 
 	})
