@@ -1,0 +1,363 @@
+//text family
+.fontl {
+    font-family: fontl, sans-serif;
+}
+
+.fontr {
+    font-family: fontr, sans-serif;
+}
+
+.fontm {
+    font-family: fontm, sans-serif;
+}
+
+.fontb {
+    font-family: fontb, sans-serif;
+}
+
+
+
+/*-add class-*/
+
+.clear {
+    clear: both;
+}
+
+.hid {
+    visibility: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.abs {
+    position: absolute;
+}
+
+.rel {
+    position: relative;
+}
+
+.fix {
+    position: fixed;
+}
+
+.white {
+    color: @white;
+}
+
+.black {
+    color: @black;
+}
+
+.color1 {
+    color: @color1;
+}
+
+.color2 {
+    color: @color2;
+}
+
+.color3 {
+    color: @color3;
+}
+
+a.white:hover {
+    color: @white;
+}
+
+a.black:hover {
+    color: lighten(@black, 10%);
+}
+
+a.color1:hover {
+    color: darken(@color1, 10%);
+}
+
+a.color2:hover {
+    color: darken(@color2, 10%);
+}
+
+a.color3:hover {
+    color: darken(@color3, 10%);
+}
+
+a.white:focus {
+    color: @white;
+}
+
+a.black:focus {
+    color: lighten(@black, 20%);
+}
+
+a.color1:focus {
+    color: darken(@color1, 20%);
+}
+
+a.color2:focus {
+    color: darken(@color1, 20%);
+}
+
+a.color3:focus {
+    color: @color3 + #444444;
+}
+
+a.white-st:hover {
+    color: @white;
+}
+
+a.black-st:hover {
+    color: @black;
+}
+
+a.color1-st:hover {
+    color: @color1;
+}
+
+a.color2-st:hover {
+    color: @color2;
+}
+
+a.color3-st:hover {
+    color: @color3;
+}
+
+a.nline {
+    text-decoration: none;
+}
+
+a.nline:hover {
+    text-decoration: none;
+}
+
+a.nline01 {
+    text-decoration: none;
+}
+
+a.nline01:hover {
+    text-decoration: underline;
+}
+
+a.nline10 {
+    text-decoration: underline;
+}
+
+a.nline10:hover {
+    text-decoration: none;
+}
+
+.color1-bg {
+    background-color: @color1;
+}
+
+.color2-bg {
+    background-color: @color2;
+}
+
+.color3-bg {
+    background-color: @color3;
+}
+
+.btn-color1 {
+    .gradient(@color1, darken(@color1, 5%));
+    border-color: darken(@color1, 5%);
+    color: @white;
+}
+
+.btn-color1:hover {
+    .gradient(darken(@color1, 10%), darken(@color1, 5%));
+    color: @white;
+}
+
+.btn-color1:active {
+    .gradient(darken(@color1, 15%), darken(@color1, 15%));
+    color: @white;
+}
+
+.lh1 {
+    line-height: 1;
+}
+
+.lh1i25 {
+    line-height: 1.25;
+}
+
+.lh1i5 {
+    line-height: 1.5;
+}
+
+.lh2 {
+    line-height: 2;
+}
+
+.ls0 {
+    letter-spacing: 0;
+}
+
+.ls1 {
+    letter-spacing: 1px;
+}
+
+.ls1i5 {
+    letter-spacing: 1.5px;
+}
+
+.ls2 {
+    letter-spacing: 2px;
+}
+
+.ls3 {
+    letter-spacing: 3px;
+}
+
+.ls4 {
+    letter-spacing: 4px;
+}
+
+.ls5 {
+    letter-spacing: 5px;
+}
+
+.ls6 {
+    letter-spacing: 6px;
+}
+
+.ls8 {
+    letter-spacing: 8px;
+}
+
+.op10 {
+    .opacity(1);
+}
+
+.op9 {
+    .opacity(0.9);
+}
+
+.op8 {
+    .opacity(0.8);
+}
+
+.op7 {
+    .opacity(0.7);
+}
+
+.op6 {
+    .opacity(0.6);
+}
+
+.op5 {
+    .opacity(0.5);
+}
+
+.op4 {
+    .opacity(0.4);
+}
+
+.op3 {
+    .opacity(0.3);
+}
+
+.op2 {
+    .opacity(0.2);
+}
+
+.op1 {
+    .opacity(0.1);
+}
+
+.op0 {
+    .opacity(0);
+}
+
+.fs12 {
+    font-size: .75em;
+}
+
+.fs14 {
+    font-size: 0.875em;
+}
+
+.fs16 {
+    font-size: 1em;
+}
+
+.fs18 {
+    font-size: 1.125em;
+}
+
+.fs20 {
+    font-size: 1.25em;
+}
+
+.fs24 {
+    font-size: 1.5em;
+}
+
+.fs26 {
+    font-size: 1.625em;
+}
+
+.fs28 {
+    font-size: 1.75em;
+}
+
+.fs32 {
+    font-size: 2em;
+}
+
+.fs34 {
+    font-size: 2.125em;
+}
+
+.fs36 {
+    font-size: 2.25em;
+}
+
+.fs40 {
+    font-size: 2.5em;
+}
+
+.fs48 {
+    font-size: 3em;
+}
+
+.fs64 {
+    font-size: 4em;
+}
+
+.fs80 {
+    font-size: 5em;
+}
+.fs96 {
+    font-size: 6em;
+}
+
+.void4 {
+    height: 0.25em;
+}
+
+.void10 {
+    height: .625em;
+}
+
+.void20 {
+    height: 1.25em;
+}
+
+.void40 {
+    height: 2.5em;
+}
+
+.void80 {
+    height: 5em;
+}
+
+.void160 {
+    height: 10em;
+}

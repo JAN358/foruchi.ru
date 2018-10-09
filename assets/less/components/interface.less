@@ -1,0 +1,174 @@
+//forms, buttons, dialogs etc.
+
+/*-add-*/
+
+.fixmenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .2)
+}
+
+.title {
+    font-size: 2em;
+    font-family: fontm;
+    text-transform: uppercase;
+    margin: 1em 0 .4em;
+}
+
+.des {
+    font-size: 1.5em;
+    font-family: fontl;
+    margin: .4em 0;
+    .opacity(0.7);
+}
+
+.dropdown .dropdown-toggle{
+    position: absolute;
+    right: -5px;
+    top: 10px;
+}
+
+/*- galarey -*/
+
+.galarey{
+    display: flex;
+    flex-wrap: wrap;
+    div{
+        flex: 1 1 250px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+/*- forma contact -*/
+
+.modal-header .close{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*-SLIDER-*/
+
+.owl-item{
+    float: left;
+}
+.owl-nav {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    height: 100%;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color:@color2;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    color: @color1;
+    background: transparent;
+}
+
+.owl-prev {
+   left: 0;
+}
+.owl-next {
+   right: 0;
+}
+
+.owl-dots{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.owl-dot {
+    width: 10px;
+    height: 10px;
+    margin: 10px 4px;
+    border: none;
+    font-family: fontb;
+    border-radius: 100%;
+    color: @white;
+    cursor: pointer;
+    padding: .2em 0 0;
+    font-size: 1.125em;
+    background: @color2;
+    &:hover{
+        background: @color1;
+    }
+}
+
+.owl-dot.active {
+    background: darken(@color1, 10%);
+    color: @white;
+}
+
+/*-menu-*/
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    border-color: @white;
+}
+
+.nav>li>a {
+    position: relative;
+    display: inline;
+    padding: 0;
+}
+
+.nav-tabs>li>a:hover {
+    border-color: @white;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+    background-color: @white;
+}
+
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus {
+    color: @color1 !important;
+    border-color: @white;
+    background-color: @white;
+}
+
+.dropdown-menu li {
+    text-align: left;
+}
+
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus {
+    background: none;
+}
+
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+.dropdown-menu>.active>a:focus {
+    background-color: @white;
+}
+
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus {
+    background-color: @white;
+}

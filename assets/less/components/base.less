@@ -1,0 +1,163 @@
+//basic tags and general rules
+body {
+    font-family: fontl, sans-serif;
+    font-size: 16px;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'fontb';
+    font-weight: 600;
+}
+
+button {
+    display: block;
+    color: @white;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 900;
+    .gradient(@color1, darken(@color1, 5%));
+    border-color: darken(@color1, 5%);
+    background: @color1;
+    .gradient(@from: @color1, @to: darken(@color1, 20%));
+}
+
+button:hover {
+    background: @white;
+    color: lighten(@black, 10%);
+}
+
+button:focus {
+    outline: none;
+}
+
+.btn{
+    margin-bottom: .2em;
+    border: 1px solid;
+}
+
+/*Checkboxes styles*/
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 1em/1.25em 'fontr', Arial, sans-serif;
+    color: #333;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input[type="checkbox"]+label:last-child {
+    margin-bottom: 1em;
+}
+
+input[type="checkbox"]+label:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid @color1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    .opacity(0.6);
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked+label:before {
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    .opacity(1);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+/*Radio styles*/
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 1em/1.25em 'fontr', Arial, sans-serif;
+    color: @color1;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input[type="radio"]+label:last-child {
+    margin-bottom: 1em;
+}
+
+input[type="radio"]+label:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid @color1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    .opacity(0.6);
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+input[type="radio"]:checked+label:before {
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    .opacity(1);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+a {
+    color: @color1;
+    font-family: fontl;
+    text-decoration-line: underline;
+}
+
+a:hover {
+    color: darken(@color1, 10%);
+    text-decoration-line: none;
+    outline: none;
+}
+
+a:focus {
+    color: darken(@color1, 20%);
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,73 @@
+//use http://www.font2web.com to generate all font formats
+.add-font(@font-url, @font-name, @font-weight: normal, @font-style: normal) {
+  font-family: @font-name;
+  src: url('@{font-folder}@{font-url}.eot'); // IE9 Compat Modes 
+  src: url('@{font-folder}@{font-url}.eot?#iefix') format('embedded-opentype'), // IE6-IE8 
+  url('@{font-folder}@{font-url}.woff') format('woff'), // Pretty Modern Browsers 
+  url('@{font-folder}@{font-url}.ttf') format('truetype'), // Safari, Android, iOS 
+  url('@{font-folder}@{font-url}.svg#@{font-name}') format('svg'); // Legacy iOS  
+  font-weight: @font-weight;
+  font-style: @font-style;
+}
+
+.gradient(@from: #000, @to: #fff) {
+  background-color: @from;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+  background-image: -webkit-linear-gradient(top, @from, @to);
+  background-image:    -moz-linear-gradient(top, @from, @to);
+  background-image:      -o-linear-gradient(top, @from, @to);
+  background-image:         linear-gradient(to bottom, @from, @to);
+}
+
+/* Внутреняя тень */
+.box-shadow(@insert, @x: 0, @y: 0, @blur: 2px, @color: rgba(0,0,0,.8)) when (@insert = true) {
+  -webkit-box-shadow: inset @x @y @blur @color;
+          box-shadow: inset @x @y @blur @color;
+}
+
+/* Внешняя тень */
+.box-shadow(@insert, @x: 0, @y: 0, @blur: 2px, @color: rgba(0,0,0,.8)) when (@insert = false) {
+  -webkit-box-shadow: @x @y @blur @color;
+          box-shadow: @x @y @blur @color;
+}
+
+/* Упрощенный вариант использования внейшей тени */
+.box-shadow(@x: 0, @y: 0, @blur: 2px, @color: rgba(0,0,0,.8)){
+  -webkit-box-shadow: @arguments;
+          box-shadow: @arguments;
+}
+
+.text-shadow(@x: 1px, @y: 1px, @radius: 2px, @color: rgba(0,0,0,.8)){
+  -webkit-text-shadow: @arguments;
+     -moz-text-shadow: @arguments;
+          text-shadow: @arguments;
+}
+
+.border-radius(@r: 1px) {
+  -webkit-border-radius: @r;
+  -moz-border-radius: @r;
+  border-radius: @r;
+}
+
+.opacity (@opacity: 0.5) {
+  -webkit-opacity: @opacity;
+     -moz-opacity: @opacity;
+          opacity: @opacity;
+}
+
+.transition(@property: all, @duration: 0.3s, @function: linear) {
+  -webkit-transition: @arguments;
+     -moz-transition: @arguments;
+       -o-transition: @arguments;
+          transition: @arguments;
+}
+
+.transition(@prop: all, @time: 0.3s, @ease: ease-in-out) {
+  transition: @prop @time @ease;
+}
+
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	   -moz-box-sizing: @type;
+	        box-sizing: @type;
+}
