@@ -17,14 +17,11 @@ function getRandomFloat(min, max) {
 
 	$("#form").on( "submit", function( event ) {
 	  event.preventDefault();
-	  addend1 = $('input[name=addend1]').attr('value');
-	  addend2 = $('input[name=addend2]').attr('value');
-	  alert(addend1);
 	  	$.ajax({
 	    type: "POST",
 	    url: "assay.php",
-	    addend1: addend1,
-	    addend2: addend2,
+	    addend1: a,
+	    addend2: b,
 	    success: function(data) {
 	          $('.out').text(data);
 	       }
