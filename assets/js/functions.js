@@ -24,7 +24,7 @@ function getRandomFloat(min, max) {
 	    url: "assay.php",
 	    addend1: addend1,
 	    addend2: addend2,
-	    success: function(addend1,addend2) {
+	    success: function(data) {
 	          $('.out').text(data);
 	       }
 	    });   
