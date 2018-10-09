@@ -14,6 +14,20 @@ function getRandomFloat(min, max) {
 	$('.addend_1').text(a);
 	$('.addend_2').text(b);
 	$('.answer').text(c);
-  })
+
+	$("#form").on( "submit", function( event ) {
+	  event.preventDefault();
+	  var form_data = $(this).serialize()
+	  	$.ajax({
+	    type: "GET",
+	    url: "assay.php",
+	    data: form_data,
+	    success: function(data) {
+	          $('.out').text('густо');
+	       }
+	    });   
+	});
+
+  });
 
 }(jQuery));
