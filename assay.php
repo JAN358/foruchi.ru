@@ -1,11 +1,11 @@
 <?php
 
-if (isset($_GET["addend1"]) && isset($_GET["addend2"]) ) { 
+if (isset($_POST["addend1"]) && isset($_POST["addend2"]) ) { 
 
 	// Формируем массив для JSON ответа
     $result = array(
-    	'addend1' => $_GET["addend1"],
-    	'addend2' => $_GET["addend2"]
+    	'addend1' => $_POST["addend1"],
+    	'addend2' => $_POST["addend2"]
     ); 
 
     // Переводим массив в JSON

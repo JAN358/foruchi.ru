@@ -25,6 +25,7 @@
 	function sendAjaxForm(result_form, ajax_form, url) {
 	    $.ajax({
 	        url:      url,
+	        type:     "POST",
 	        dataType: "html",
 	        contentType: "application/json; charset=utf-8",
 	        data: $("#"+ajax_form).serialize(),
