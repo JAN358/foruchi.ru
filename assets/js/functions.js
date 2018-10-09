@@ -17,13 +17,15 @@ function getRandomFloat(min, max) {
 
 	$("#form").on( "submit", function( event ) {
 	  event.preventDefault();
-	  var form_data = $(this).serialize()
+	  addend1 = $('input[name=addend1]').value();
+	  addend2 = $('input[name=addend2]').value();
 	  	$.ajax({
 	    type: "POST",
 	    url: "assay.php",
-	    data: form_data,
-	    success: function(data) {
-	          $('.out').html(data);
+	    addend1: addend1,
+	    addend2: addend2,
+	    success: function(addend1,addend2) {
+	          $('.out').text(data);
 	       }
 	    });   
 	});
