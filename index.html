@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="assets/js/jq.js"></script>
+    <script src="assets/js/maskedInput.min.js"></script>
     <title>Hello, world!</title>
   </head>
   <body>
@@ -32,18 +33,42 @@
 								<div class="sign">+</div>
 								<div class="addend_2"></div>
 								<div class="equal">=</div>
-								<div class="answer"><input type="text" name="answer"></div>
+								<div class="answer"><span class="qwest">?</span><input id="answer" class="form-control error" type="text" name="answer" autocomplete="off"></div>
 							</div>
 						</div>
 					</div>					
-					<div class="p-5 m-5">
-						<input type="text" name="addend1">
-						<input type="text" name="addend2">
-						<img src="assets/images/sprite.png" alt="img">
+					<div class="p-2 m-4">
+						<div class="input-group p-4">
+							<input id="otvet" type="hidden" name="otvet" placeholder="1">
+							<div class="wrap_addend1 px-2">
+								<input id="addend1" class="form-control error" type="text" name="addend1" autocomplete="off">								
+							</div>
+							<div class="wrap_addend2 px-2 rel">
+								<input id="addend2" class="form-control error" type="text" name="addend2" autocomplete="off">
+							</div>
+							<input class="form-control button d-none btn-primary" type="button" value="Ответить">
+						</div>		
+						<div class="medio">
+							<div class ="graph_addend1">
+								<div class ="graph">
+									<div class="wrap_graph">
+									</div>
+									<div class ="graph-st">></div>										
+								</div>
+							</div>
+							<div class ="graph_addend2">
+								<div class ="graph">
+									<div class="wrap_graph">
+									</div>
+									<div class ="graph-st">></div>										
+								</div>
+							</div>
+							<img src="assets/images/sprite.png" alt="img">
+						</div>				
 					</div>
-					<input  type="button" value="ОК">
+
 					</form>
-					<div class="out">Пусто</div>
+					<div class="out"></div>
 				</div>
 			</div>
 		</div>		
