@@ -12,36 +12,31 @@
 	$('.answer').text(c);
 
 	$("#ajax_form").click(function(){
-		e.preventDefault();
 		sendAjaxForm('result_form', 'ajax_form', 'assay.php');
 		return false; 
 	})
 
   });
 
-  	function getRandomFloat(min, max) {
-	  return Math.floor(Math.random() * (max - min)) + min;
-	}
-
-	var data = {};
-	data.addend_1 = "title";
-	data.addend_2 = "message";
-
-	function sendAjaxForm(result_form, ajax_form, url) {
-	    $.ajax({
-	        url:      url,
-	        type:     "POST",
-	        data: JSON.stringify(data),
-	        contentType: "application/json; charset=utf-8",
-	        //data: $("#"+ajax_form).serialize(),
-	        success: function(response) {
-	        	result = JSON.stringify(data)/*$.parseJSON(response)*/;
-	        	$('.out').html('Первый: '+result.addend1+'<br>Второй: '+result.addend1);
-	    	},
-	    	error: function(response) {
-	            $('.out').html('Ошибка. Данные не отправлены.');
-	    	}
-	 	});
-	}
-
 }(jQuery));
+
+function getRandomFloat(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function sendAjaxForm(result_form, ajax_form, url) {
+	var data = $("#"+ajax_form).serialize();
+    $.ajax({
+        url:      url,
+        type:     "POST",
+        dataType: "html",
+        data: data,
+        success: function(response) {
+        	result = jQuery.parseJSON(response);
+        	$('.out').html('Первый: '+result.addend1+'<br>Второй: '+result.addend2);
+    	},
+    	error: function(response) {
+            $('.out').html('Ошибка. Данные не отправлены.');
+    	}
+ 	});
+};
