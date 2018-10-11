@@ -85,6 +85,7 @@ function sendAjaxForm(result_form, ajax_form, url) {
                     $('.graph_addend2').show();
                     $('.graph_addend2 .graph').css({'left': pol});
                     $('input#addend1').attr('disabled', 'disabled');
+                    $('.wrap_addend1').html(result.addend1);
                     $('#otvet').attr('placeholder', 2);
                     $('input#addend1').removeClass('error_inp');
                     $('input#addend1').removeClass('error_bor');
@@ -106,6 +107,7 @@ function sendAjaxForm(result_form, ajax_form, url) {
                     $('.answer input').show();
                     $('.answer .qwest').hide();
                     $('input#addend2').attr('disabled', 'disabled');
+                    $('.wrap_addend2').html(result.addend2);
                     $('#otvet').attr('placeholder', 3);
                     $('input#addend2').removeClass('error_inp');
                     $('#answer').focus();
@@ -123,6 +125,7 @@ function sendAjaxForm(result_form, ajax_form, url) {
                 if(result.answer == c){
                     $('input#answer').removeClass('error_inp');
                     $('input#answer').attr('disabled', 'disabled');
+                    $('.answer').html(result.answer);
                     $('input[type=button]').hide();
                     $('.out').html('Поздравляем! Вы справились с заданием!');                    
                 } else if(result.answer==''){
